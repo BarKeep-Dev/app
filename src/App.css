@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.template {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  flex-grow: 2;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
