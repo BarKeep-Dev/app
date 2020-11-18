@@ -1,0 +1,9 @@
+.cards-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 800px;
+  padding: 10px;
+  border: dotted 3px darkred;
+}

@@ -1,0 +1,9 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  width: 40%;
+  margin: 10px;
+}

@@ -1,23 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import OnePager from './components/one-pager/one-pager';
 
 function App() {
   return (
     <div className="App">
-      <div className="template">
-        <div className="card">
-          <h2>Header</h2>
-          <body>Body</body>
-        </div>
-        <div className="card">
-          <h2>Header</h2>
-          <body>Body</body>
-        </div>
-        <div className="card">
-          <h2>Header</h2>
-          <body>Body</body>
-        </div>
-      </div>
+      <OnePager />
     </div>
   );
 }
