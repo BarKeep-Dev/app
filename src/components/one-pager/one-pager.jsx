@@ -4,7 +4,7 @@ import Card from '../card/card';
 
 function OnePager() {
   const [cardNumber, setCardNumber] = useState(1)
-  const [cards, setCards] = useState([{id: cardNumber, type: 'blank'}])
+  const [cards, setCards] = useState([])
 
   const addCard = () => {
     let newCardNumber = cardNumber + 1
@@ -12,7 +12,7 @@ function OnePager() {
       ...cards,
       {
         id: newCardNumber,
-        type: 'blank'
+        type: 'small'
       }
     ])
     setCardNumber(newCardNumber)

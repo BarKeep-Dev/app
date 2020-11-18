@@ -1,13 +1,25 @@
-.card-container {
+.small-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px black solid;
-  height: 20%;
-  width: 40%;
   margin: 10px;
   position: relative;
+  height: 20%;
+  width: 40%;
+}
+
+.big-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  margin: 10px;
+  position: relative;
+  height: 40%;
+  width: 40%;
 }
 
 .remove-card-button { 
