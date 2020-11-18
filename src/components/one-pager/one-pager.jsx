@@ -6,8 +6,7 @@ function OnePager() {
   const [cardNumber, setCardNumber] = useState(1)
   const [cards, setCards] = useState([{id: cardNumber, type: 'blank'}])
 
-  const addCard = (e) => {
-    e.preventDefault();
+  const addCard = () => {
     let newCardNumber = cardNumber + 1
     setCards([
       ...cards,
@@ -19,11 +18,15 @@ function OnePager() {
     setCardNumber(newCardNumber)
   }
 
+  const removeCard = (card_id) => {
+    setCards(cards.filter(card => card.id !== card_id))
+  } 
+
   const CardsDisplay = () => {
     if (cards.length > 0) {
       return cards.map((card) => {
         return (
-          <Card key={card.id} type={card.type}/>
+          <Card key={card.id} id={card.id} type={card.type} removeCard={removeCard}/>
         );
       });
     } else {
