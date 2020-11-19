@@ -5,12 +5,12 @@ import Card from '../card/card';
 function OnePager() {
   const [cards, setCards] = useState([])
 
-  const addCard = () => {
+  const addCard = (type) => {
     setCards([
       ...cards,
       {
         id: Math.random() * 100,
-        type: 'small'
+        type: type
       }
     ])
   }
@@ -32,7 +32,8 @@ function OnePager() {
   }
   return (
     <div>
-      <button onClick={(e) => addCard(e)}>Add Card</button>
+      <button onClick={() => addCard('small')}>Add Small Card</button>
+      <button onClick={() => addCard('big')}>Add Big Card</button>
       <div className="cards-display">
         <CardsDisplay />
       </div>
