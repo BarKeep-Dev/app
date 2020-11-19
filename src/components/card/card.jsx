@@ -1,16 +1,23 @@
 import React from 'react';
 import './card.css';
+import SmallCard from '../cards/small-card/small-card';
+import BigCard from '../cards/big-card/big-card';
 
-function Card(props) {
-  const { id, type, removeCard } = props
-  return (
-    <div className="card-container">
-      <button className="remove-card-button" onClick={() => removeCard(id)}>X</button>
-      <h1>Card Title</h1>
-      <h2>type: {type}</h2>
-      <p className="card-id-display">ID: {id}</p>
-    </div>
-  );
+
+function Card (props) {
+  
+  const CardReducer = () => {
+    switch (props.type) {
+      case 'small':
+        return <SmallCard props={props}/>;
+      case 'big':
+        return <BigCard props={props} />;
+      default:
+        return <SmallCard />;
+    }
+  }
+
+  return <CardReducer />
 }
 
 export default Card;

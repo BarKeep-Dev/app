@@ -1,0 +1,27 @@
+.big-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  margin: 10px;
+  position: relative;
+  height: 400px;
+  width: 300px;
+}
+
+.remove-card-button { 
+  position: absolute;
+  top: 0; 
+  right: 0;
+  margin-top: 1px;
+  margin-right: 2px;
+}
+
+.card-id-display {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1px;
+  margin-right: 2px;
+}

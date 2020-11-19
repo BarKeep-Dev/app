@@ -3,19 +3,16 @@ import './one-pager.css';
 import Card from '../card/card';
 
 function OnePager() {
-  const [cardNumber, setCardNumber] = useState(1)
-  const [cards, setCards] = useState([{id: cardNumber, type: 'blank'}])
+  const [cards, setCards] = useState([])
 
-  const addCard = () => {
-    let newCardNumber = cardNumber + 1
+  const addCard = (type) => {
     setCards([
       ...cards,
       {
-        id: newCardNumber,
-        type: 'blank'
+        id: Math.random() * 100,
+        type: type
       }
     ])
-    setCardNumber(newCardNumber)
   }
 
   const removeCard = (card_id) => {
@@ -35,7 +32,8 @@ function OnePager() {
   }
   return (
     <div>
-      <button onClick={(e) => addCard(e)}>Add Card</button>
+      <button onClick={() => addCard('small')}>Add Small Card</button>
+      <button onClick={() => addCard('big')}>Add Big Card</button>
       <div className="cards-display">
         <CardsDisplay />
       </div>
