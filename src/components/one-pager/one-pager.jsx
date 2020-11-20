@@ -32,8 +32,9 @@ function OnePager() {
   }
   return (
     <div>
-      <button onClick={() => addCard('small')}>Add Small Card</button>
-      <button onClick={() => addCard('big')}>Add Big Card</button>
+      <button onClick={() => addCard("small")}>Add Small Card</button>
+      <button onClick={() => addCard("big")}>Add Big Card</button>
+      <button onClick={() => addCard("wide")}>Add Wide Card</button>
       <div className="cards-display">
         <CardsDisplay />
       </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import './card.css';
-import SmallCard from '../cards/small-card/small-card';
-import BigCard from '../cards/big-card/big-card';
+import { SmallCard, BigCard, WideCard } from '../cards/cards.js';
 
 
 function Card (props) {
@@ -12,6 +11,8 @@ function Card (props) {
         return <SmallCard props={props}/>;
       case 'big':
         return <BigCard props={props} />;
+      case 'wide':
+        return <WideCard props={props} />;
       default:
         return <SmallCard />;
     }
